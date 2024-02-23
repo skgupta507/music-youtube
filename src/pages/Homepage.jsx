@@ -19,7 +19,7 @@ const Homepage = () => {
                 if (data.carousel.length !== 0) {
                     setCarousel(data.carousel);
                 } else {
-                    const { data: { trendingRes, bollyRes, popRes } } = await axios.get('https://ytmusic-backend-orpin.vercel.app');
+                    const { data: { trendingRes, bollyRes, popRes } } = await axios.get('https://ytmusic-backend-orpin.vercel.app/Homepage');
                     setCarousel([trendingRes, bollyRes, popRes])
                 }
                 clearTracklist();
