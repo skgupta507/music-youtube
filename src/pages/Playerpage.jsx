@@ -27,9 +27,9 @@ const Playerpage = () => {
             try {
                 const seed = data.seed;
                 if (data.seed == null) navigate('/', { replace: true });
-                const { data: { mediaItems } } = await axios.get(`https://spotify23.p.rapidapi.com/seed_to_playlist/?uri=${seed}`, config);
+                const { data: { mediaItems } } = await axios.get(`https://spotify117.p.rapidapi.com/seed_to_playlist/?uri=${seed}`, config);
                 const playlistId = mediaItems[0].uri.split(":")[2];
-                const { data: { items } } = await axios.get(`https://spotify23.p.rapidapi.com/playlist_tracks/?id=${playlistId}&offset=1&limit=30`, config);
+                const { data: { items } } = await axios.get(`https://spotify117.p.rapidapi.com/playlist_tracks/?id=${playlistId}&offset=1&limit=30`, config);
                 const tracklist = items.map(item => item.track);
                 setTracklist(tracklist);
                 setLoad(true);
