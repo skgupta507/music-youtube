@@ -40,7 +40,7 @@ const TopResult = ({ songData }) => {
         const seed = songData.data.uri;
         setSeed(seed);
         try {
-            const {data: {tracks: [song]}} = await axios.get(`https://spotify23.p.rapidapi.com/tracks/?ids=${songData.data.id}`, config);
+            const {data: {tracks: [song]}} = await axios.get(`https://spotify117.p.rapidapi.com/tracks/?ids=${songData.data.id}`, config);
             setSong(song);
             setTracklist([song]);
             navigate('/song');
