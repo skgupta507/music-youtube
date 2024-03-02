@@ -36,7 +36,7 @@ const Searchpage = () => {
         (
             async () => {
                 try {
-                    const { data: { topResults, tracks } } = await axios.get(`https://spotify23.p.rapidapi.com/search/`, config);
+                    const { data: { topResults, tracks } } = await axios.get(`https://spotify117.p.rapidapi.com/search/`, config);
                     setTopResults(topResults.items[1]);
                     setTracks(tracks);
                     setLoad(true);
